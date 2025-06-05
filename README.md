@@ -79,9 +79,7 @@ docker run -it --rm -v $(pwd):/workspace terraform-azure-env
 Working directory /workspace contains main.tf
 
 Screenshot of the container running, docker build and docker run commands
+![Docker Build](https://raw.githubusercontent.com/vishcloud/CloudDrove_Assignment/main/Screenshots/docker-build.png)
 
-![Docker Build](Screenshots/docker-build.png)
-
-![Image](https://github.com/user-attachments/assets/854c576f-cf19-4db0-8ed0-55c8f52dd6a6)
 
 
