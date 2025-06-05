@@ -78,8 +78,72 @@ docker run -it --rm -v $(pwd):/workspace terraform-azure-env
 
 Working directory /workspace contains main.tf
 
-Screenshot of the container running, docker build and docker run commands
-![Docker Build](https://raw.githubusercontent.com/vishcloud/CloudDrove_Assignment/main/Screenshots/docker-build.png)
+✅ Task 3: Terraform Deployment (Inside Container)
+1. Login to Azure:
+
+az login
+2. main.tf (Terraform file to deploy a Resource Group):
+
+provider "azurerm" {
+  features {}
+  use_azuread_auth = true  # Use Azure CLI credentials
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = "devops-test-rg"
+  location = "eastus"
+}
+3. Initialize Terraform:
+
+terraform init
+4. Plan and Apply Deployment:
+
+terraform plan
+terraform apply
+📝 Output:
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+🖼 Screenshot: Azure Portal shows devops-test-rg created in eastus.
+
+✅ Task 4: Automation & Cleanup
+🔁 Modify Dockerfile to auto-run Terraform if .tf files exist:
+
+Dockerfile CMD Improvement:
+
+CMD ["bash", "-c", "if ls /workspace/*.tf 1> /dev/null 2>&1; then terraform init && terraform apply -auto-approve; else exec bash; fi"]
+To destroy the infrastructure (inside container):
+
+terraform destroy
+📦 Deliverables
+File	Description
+Dockerfile	Defines a portable Terraform + Azure CLI environment
+main.tf	Declares Azure resource group
+variables.tf 
+README.md	Documentation of approach
+Screenshots	Running container, Docker build/run output, Terraform apply, Azure Portal
+
+✅ Learnings & Best Practices
+✅ Use Docker to eliminate host setup dependencies
+
+✅ Use az login for quick, interactive Terraform auth
+
+✅ Use service principals for automation (optional extension)
+
+✅ Mount local volumes to retain .tf files
+
+✅ Cleanup resources with terraform destroy
+
+🔐 Security Tip
+For automation, avoid az login and instead:
+
+Use Azure service principals (az ad sp create-for-rbac)
+
+Pass secrets securely using environment variables
+
+👋 Author
+Vishal Pimpale
+DevOps Engineer
+GitHub: https://github.com/vishcloud
 
 
 
