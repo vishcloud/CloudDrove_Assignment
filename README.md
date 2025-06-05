@@ -80,6 +80,6 @@ Working directory /workspace contains main.tf
 
 Screenshot of the container running, docker build and docker run commands
 
-![Docker Build](https://github.com/vishcloud/CloudDrove_Assignment/blob/main/docker-build.png?raw=true)
+![Docker Build](Screenshots/docker-build.png)
 
 
