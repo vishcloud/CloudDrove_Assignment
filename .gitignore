@@ -11,6 +11,5 @@ terraform.tfvars
 .DS_Store
 Thumbs.db
 
-# Ignore screenshots and misc
-Screenshots/
+
 
