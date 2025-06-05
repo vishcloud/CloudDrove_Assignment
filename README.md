@@ -18,11 +18,15 @@ Create a **portable Docker environment** to provision infrastructure on **Micros
 
 ## 📁 Project Structure
 
-├── Dockerfile # Defines the custom image with Terraform and Azure CLI
+├── Dockerfile # Defines the custom Docker image with Terraform and Azure CLI
 
-├── main.tf # Terraform configuration file
+├── main.tf # Terraform configuration file to deploy Azure resources
 
-└── README.md # Documentation (this file)
+├── variables.tf # Defines input variables for Terraform modules
+
+├── README.md # Documentation and usage guide (this file)
+
+└── Screenshots/ # Contains screenshots for Docker build, run, apply, and destroy
 
 ---
 
