@@ -122,7 +122,7 @@ terraform destroy
 File	Description
 Dockerfile	Defines a portable Terraform + Azure CLI environment
 main.tf	Declares Azure resource group
-variables.tf 
+variables.tf Defines input variables for Terraform modules
 README.md	Documentation of approach
 Screenshots	Running container, Docker build/run output, Terraform apply, Azure Portal
 
