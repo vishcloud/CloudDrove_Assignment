@@ -18,9 +18,10 @@ Create a **portable Docker environment** to provision infrastructure on **Micros
 
 ## 📁 Project Structure
 
-.
 ├── Dockerfile # Defines the custom image with Terraform and Azure CLI
+
 ├── main.tf # Terraform configuration file
+
 └── README.md # Documentation (this file)
 
 ---
@@ -79,4 +80,6 @@ Working directory /workspace contains main.tf
 
 Screenshot of the container running, docker build and docker run commands
 
-![image alt]()
+![image alt](https://github.com/vishcloud/CloudDrove_Assignment/blob/75fe724d747bc7024f0506305e280d7510268888/Screenshots/docker%20build.png)
+![image alt](https://github.com/vishcloud/CloudDrove_Assignment/blob/75fe724d747bc7024f0506305e280d7510268888/Screenshots/docker%20run.png)
+![image alt](https://github.com/vishcloud/CloudDrove_Assignment/blob/75fe724d747bc7024f0506305e280d7510268888/Screenshots/running%20container.png)
